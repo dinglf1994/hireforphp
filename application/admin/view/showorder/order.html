@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下单列表</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container-fluid" style="width: 80%">
+    <div class="tb">
+        <table class="table">
+            <caption>买单列表</caption>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>类型</th>
+                <th>数量</th>
+                <th>价格</th>
+                <th>时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name='bid' id='bid'}
+            <tr>
+                <th scope="row">{$bid.number}</th>
+                <td>{$bid.type}</td>
+                <td>{$bid.quantity}</td>
+                <td>{$bid.price}</td>
+                <td>{$bid.create_time}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+
+
+        <table class="table">
+            <caption>卖单列表</caption>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>类型</th>
+                <th>数量</th>
+                <th>价格</th>
+                <th>时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name='ask' id='ask'}
+            <tr>
+                <th scope="row">{$ask.number}</th>
+                <td>{$ask.type}</td>
+                <td>{$ask.quantity}</td>
+                <td>{$ask.price}</td>
+                <td>{$ask.create_time}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

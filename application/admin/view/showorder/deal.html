@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易成功信息</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container-fluid" style="width: 80%">
+    <div class="tb">
+        <table class="table">
+            <caption>买单列表</caption>
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>买家编号</th>
+                <th>卖家编号</th>
+                <th>成交数量</th>
+                <th>成交价格</th>
+                <th>成交时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist name='deal' id='deal'}
+            <tr>
+                <th scope="row">{$deal.id}</th>
+                <th scope="row">{$deal.ask_number}</th>
+                <td>{$deal.bid_number}</td>
+                <td>{$deal.deal_quantity}</td>
+                <td>{$deal.deal_price}</td>
+                <td>{$deal.create_time}</td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
