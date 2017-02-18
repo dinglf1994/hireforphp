@@ -25,3 +25,5 @@ http://www.hire.com/admin/showorder/order可以查看下单列表:
 
 http://www.hire.com/admin/showorder/deal可以查看交易信息
 
+
+完成所有功能大概花了用了5个小时左右.
